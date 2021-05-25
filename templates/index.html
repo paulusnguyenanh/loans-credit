@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+
+<body>
+<div style="text-align: center">
+<h1> Ngân hàng NTA xin chào</h1>
+</div>
+ <div class="login">
+	<h1>Tra cứu cho vay</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="luong" placeholder="Mức lương" required="required" />
+        <input type="text" name="time" placeholder="Kinh nghiệm" required="required" />
+        <button type="submit" class="btn btn-primary btn-block btn-large">Dự đoán</button>
+    </form>
+
+   <br>
+   <br>
+     {{daura}}
+     <h2 class="title">Contact Us</h2>
+     <div class="social-login">
+                    <ul>
+                        <li class="google"><a href="https://www.google.com.vn/?hl=vi">Google</a></li>
+                        <li class="fb"><a href="https://www.facebook.com/">Facebook</a></li>
+                    </ul>
+                </div>
+
+ </div>
+
+
+</body>
+</html>
